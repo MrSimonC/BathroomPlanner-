@@ -29,3 +29,8 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Private bathroom inputs belong in a separate private repository.
+/BathroomPlannerData/
+/private-data/
+/bathroom/

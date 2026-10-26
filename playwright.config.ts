@@ -27,7 +27,12 @@ export default defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'], viewport: { width: 1440, height: 900 },
-        launchOptions: { args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'] },
+        launchOptions: {
+          // Optional cloud-image fallback when the pinned browser download is unavailable.
+          // Leave unset in CI to retain Playwright's pinned Chromium.
+          executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || undefined,
+          args: ['--use-angle=swiftshader', '--enable-unsafe-swiftshader'],
+        },
       },
     },
     { name: 'firefox', use: { ...devices['Desktop Firefox'], viewport: { width: 1440, height: 900 } } },
