@@ -1,0 +1,31 @@
+{
+  "id": "synthetic-bathroom",
+  "name": "Synthetic Bathroom",
+  "activeFloorId": "bathroom-ground",
+  "createdAt": "2026-10-26T00:00:00.000Z",
+  "updatedAt": "2026-10-26T00:00:00.000Z",
+  "floors": [{
+    "id": "bathroom-ground", "name": "Ground Floor", "level": 0, "elevation": 0,
+    "walls": [
+      { "id": "bathroom-north", "start": { "x": 0, "y": 0 }, "end": { "x": 300, "y": 0 }, "thickness": 10, "height": 240, "color": "#dddddd" },
+      { "id": "bathroom-east", "start": { "x": 300, "y": 0 }, "end": { "x": 300, "y": 240 }, "thickness": 10, "height": 240, "color": "#dddddd" },
+      { "id": "bathroom-south", "start": { "x": 300, "y": 240 }, "end": { "x": 0, "y": 240 }, "thickness": 10, "height": 240, "color": "#dddddd" },
+      { "id": "bathroom-west", "start": { "x": 0, "y": 240 }, "end": { "x": 0, "y": 0 }, "thickness": 10, "height": 240, "color": "#dddddd" }
+    ],
+    "doors": [
+      { "id": "bathroom-door", "wallId": "bathroom-south", "position": 0.75, "width": 75, "height": 205, "type": "single", "swingDirection": "right", "flipSide": false }
+    ],
+    "windows": [
+      { "id": "bathroom-window", "wallId": "bathroom-north", "position": 0.75, "width": 80, "height": 60, "sillHeight": 150, "type": "fixed" }
+    ],
+    "furniture": [
+      { "id": "bathroom-bath", "catalogId": "bathtub", "position": { "x": 100, "y": 50 }, "rotation": 0, "width": 170, "depth": 75, "height": 60, "scale": { "x": 1, "y": 1, "z": 1 } },
+      { "id": "bathroom-basin", "catalogId": "sink_b", "position": { "x": 262.5, "y": 40 }, "rotation": 0, "width": 55, "depth": 42, "height": 85, "scale": { "x": 1, "y": 1, "z": 1 } },
+      { "id": "bathroom-toilet", "catalogId": "toilet", "position": { "x": 265, "y": 150 }, "rotation": 0, "width": 40, "depth": 65, "height": 40, "scale": { "x": 1, "y": 1, "z": 1 } }
+    ],
+    "rooms": [
+      { "id": "bathroom-room", "name": "Bathroom", "walls": ["bathroom-north", "bathroom-east", "bathroom-south", "bathroom-west"], "area": 7.2, "floorTexture": "ceramic-white", "roomType": "indoor", "details": { "roomType": "bathroom", "ceilingHeight": 240 } }
+    ],
+    "stairs": [], "columns": [], "guides": [], "measurements": [], "annotations": [], "textAnnotations": [], "groups": []
+  }]
+}
